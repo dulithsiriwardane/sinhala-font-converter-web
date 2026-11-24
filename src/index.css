@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "fm-bindumathi";
+  src: url("./assets/fonts/fmbindumathi.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "isi-bindumathi";
+  src: url("./assets/fonts/isibindumathi.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-fmbindu: "fm-bindumathi", sans-serif;
+  --font-isibindu: "isi-bindumathi", sans-serif;
+}
