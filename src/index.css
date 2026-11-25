@@ -1,4 +1,46 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+  include: badge, dropdown;
+}
+
+@plugin "daisyui/theme" {
+  name: "sera";
+  default: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(0.205 0 0);
+  --color-base-200: oklch(0.145 0 0);
+  --color-base-300: oklch(1 0 0 / 10%);
+  --color-base-content: oklch(0.985 0 0);
+  --color-primary: oklch(0.922 0 0);
+  --color-primary-content: oklch(0.205 0 0);
+  --color-secondary: oklch(0.269 0 0);
+  --color-secondary-content: oklch(0.985 0 0);
+  --color-accent: oklch(0.269 0 0);
+  --color-accent-content: oklch(0.985 0 0);
+  --color-neutral: oklch(0.269 0 0);
+  --color-neutral-content: oklch(0.708 0 0);
+  --color-info: oklch(0.269 0 0);
+  --color-info-content: oklch(0.985 0 0);
+  --color-success: oklch(0.269 0 0);
+  --color-success-content: oklch(0.985 0 0);
+  --color-warning: oklch(0.708 0 0);
+  --color-warning-content: oklch(0.145 0 0);
+  --color-error: oklch(0.704 0.191 22.216);
+  --color-error-content: oklch(0.145 0 0);
+  --sera-input: oklch(1 0 0 / 15%);
+  --sera-ring: oklch(0.556 0 0);
+
+  --radius-selector: 0;
+  --radius-field: 0;
+  --radius-box: 0;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
 
 @font-face {
   font-family: "fm-bindumathi";
@@ -16,7 +58,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "inter";
+  src: url("./assets/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 @theme {
   --font-fmbindu: "fm-bindumathi", sans-serif;
   --font-isibindu: "isi-bindumathi", sans-serif;
+  --font-inter: "inter", sans-serif;
+}
+
+@theme inline {
+  --color-input: var(--sera-input);
+  --color-ring: var(--sera-ring);
 }
